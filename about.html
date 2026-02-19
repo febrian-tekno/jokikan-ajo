@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joki-kan Ajo | Academic & IT Task Help</title>
+  <meta name="description" content="Joki-kan Ajo membantu tugas akademik & IT. Aman, rapi, dan sesuai instruksi dosen.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ICON -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            wa: '#25D366'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  .nav-link {
+    position: relative;
+    transition: color .3s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width .3s;
+  }
+  .nav-link:hover {
+    color: #2563eb;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-link {
+    padding: 12px 0;
+    border-bottom: 1px solid #e4e4e7;
+    transition: transform .2s, color .2s;
+  }
+  .mobile-link:hover {
+    color: #2563eb;
+    transform: translateX(6px);
+  }
+</style>
+</head>
+<body class="bg-white text-zinc-900 scroll-smooth overflow-x-hidden">
+  <!-- BACKGROUND : SOFT NOISE GRADIENT -->
+<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-zinc-50 to-white"></div>
+
+  <!-- soft radial glow -->
+  <div class="absolute -top-48 left-1/2 -translate-x-1/2 w-[900px] h-[900px]
+              bg-primary/15 blur-[140px] rounded-full"></div>
+
+  <!-- noise layer -->
+  <div class="absolute inset-0 opacity-[0.03]
+              bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"200\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]">
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-white border-b border-zinc-200 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="/" class="flex items-center">
+      <img src="/assets/logo.png" alt="Joki-kan Ajo" class="h-8">
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex items-center gap-8 text-sm text-zinc-600">
+      <a href="/#layanan" class="nav-link">Layanan & Jasa</a>
+      <a href="/#aturan" class="nav-link">Alur Layanan</a>
+      <a href="/#kontak" class="nav-link">Kontak</a>
+      <a href="/about.html" class="nav-link">Tentang</a>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-2xl text-zinc-700">
+      <i class="bx bx-menu"></i>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu"
+       class="md:hidden fixed inset-0 bg-white translate-x-full
+              transition-transform duration-300 ease-out">
+
+    <!-- MOBILE HEADER (LOGO + CLOSE) -->
+    <div class="flex justify-between items-center px-6 py-4 border-b border-zinc-200">
+      <a href="/" class="flex items-center gap-2">
+        <img src="/assets/logo.png" alt="Joki-kan Ajo" class="h-7">
+      </a>
+      <button id="closeMenu" class="text-2xl text-zinc-700">
+        <i class="bx bx-x"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE LINKS -->
+    <div class="flex flex-col px-6 py-8 gap-6 text-base text-zinc-700">
+      <a href="/#layanan" class="mobile-link">Layanan & Jasa</a>
+      <a href="/#aturan" class="mobile-link">Alur Layanan</a>
+      <a href="/#kontak" class="mobile-link">Kontak</a>
+      <a href="/about.html" class="mobile-link">Tentang</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="min-h-screen px-9 pt-24 relative">
+  <div class="max-w-7xl mx-auto">
+
+
+    <!-- HERO CONTENT -->
+    <div class="grid md:grid-cols-2 pt-24 gap-20 items-center">
+
+      <!-- TEXT -->
+      <div class="space-y-8 relative z-10">
+
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+          Bukan Sekadar
+          <span class="text-primary">Jasa Tugas</span>,
+          Tapi Partner yang Bisa Diandalkan
+        </h2>
+
+        <p class="text-lg text-zinc-600 leading-relaxed max-w-xl">
+          Joki-kan Ajo hadir sebagai solusi bagi mahasiswa dan pelajar
+          yang menghadapi keterbatasan waktu, tekanan akademik,
+          dan tuntutan tugas yang harus dikerjakan secara rapi,
+          aman, dan sesuai instruksi.
+        </p>
+
+        <div class="flex items-center gap-2 text-sm text-zinc-400 pt-4">
+          <span>Kenali kami lebih dalam</span>
+          <i class="bx bx-down-arrow-alt animate-bounce"></i>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="relative">
+        <div class="absolute -inset-12 bg-primary/20 blur-[160px] rounded-full"></div>
+
+        <div class="relative rounded-3xl overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+            alt="Diskusi dan kolaborasi"
+            class="h-[420px] w-full object-cover"
+          />
+
+          <div class="absolute bottom-0 left-0 right-0 p-6
+                      bg-gradient-to-t from-black/60 to-transparent
+                      text-white text-sm">
+            Diskusi yang jelas, pengerjaan rapi, dan komunikasi yang terbuka
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SIGNATURE -->
+<section class="py-32 px-6">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.2] text-zinc-900">
+      Kami fokus pada proses yang tertata,
+      <br />
+      <span class="text-primary">
+        komunikasi yang jelas, dan hasil yang konsisten.
+      </span>
+    </p>
+  </div>
+</section>
+
+
+<!-- STORY -->
+<section class="relative py-36 px-6 bg-zinc-50">
+
+  <!-- BACKGROUND DECOR -->
+  <div class="absolute -top-40 -left-40 w-[520px] h-[520px] bg-primary/15 rounded-full blur-[130px]"></div>
+  <div class="absolute top-1/3 -right-48 w-[620px] h-[620px] bg-emerald-400/15 rounded-full blur-[150px]"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+
+    <!-- SECTION LABEL -->
+    <div class="mb-4">
+      <span class="inline-block text-sm tracking-widest uppercase text-zinc-400">
+        Cerita Kami
+      </span>
+    </div>
+
+    <!-- CONTENT GRID -->
+    <div class="grid md:grid-cols-2 gap-20 items-start">
+
+      <!-- STORY TEXT -->
+      <div class="space-y-10 pl-10">
+
+<!-- TITLE -->
+<h3 class="text-3xl md:text-4xl font-bold leading-tight max-w-md">
+  Berawal dari bantuin tugas
+  <span class="text-emerald-500">sederhana</span>
+  hingga makin sering dipercaya.
+</h3>
+
+        <!-- MAIN STORY (2 PARAGRAF) -->
+        <div class="space-y-6 text-lg leading-relaxed text-zinc-700">
+
+          <p>
+            Joki-kan Ajo nggak langsung dibikin.
+            Semuanya berawal dari hal sederhana:
+            bantuin tugas teman, ngerapiin bagian yang berantakan,
+            atau bantuin ngerjain yang udah mentok duluan.
+          </p>
+
+          <p>
+            Dari situ baru kelihatan polanya.
+            Tugasnya sering kali sudah jelas,
+            tapi orangnya lagi nggak selalu siap.
+            Waktu kepotong, fokus kebagi,
+            kemampuan teknis beda-beda,
+            sementara deadline tetap jalan.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- CONTEXT VISUAL -->
+      <div class="relative space-y-8">
+
+        <div class="absolute -inset-10 bg-primary/10 blur-[120px] rounded-full"></div>
+
+        <!-- BOX 1 -->
+        <div class="relative p-8 rounded-3xl bg-white shadow-sm">
+          <p class="text-sm font-bold uppercase tracking-wider text-blue-300 mb-3">
+            Masalah yang Sering Kejadian
+          </p>
+
+          <p class="text-zinc-700 leading-relaxed">
+            Banyak orang sebenarnya paham harus ngapain,
+            tapi kondisinya lagi nggak mendukung.
+            Entah waktunya keburu habis,
+            pikirannya lagi kepecah,
+            atau tenaganya udah kepake di urusan lain.
+          </p>
+        </div>
+
+        <!-- BOX 2 -->
+        <div class="relative p-8 rounded-3xl bg-white shadow-sm">
+          <p class="text-sm font-bold uppercase tracking-wider text-blue-300 mb-3">
+            Kendala Teknis & Alat
+          </p>
+
+          <p class="text-zinc-700 leading-relaxed">
+            Di sisi lain, alat juga sering jadi masalah.
+            Laptop seadanya, harus pinjam,
+            atau software yang nggak lengkap,
+            padahal tugas tetap harus dikumpulin tepat waktu.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- STORY CLOSING -->
+    <div class="mt-24 max-w-3xl mx-auto text-center">
+      <p class="text-xl font-medium text-zinc-800">
+        Dari situ, joki-kan ajo lahir sebagai solusi tugas akademik dan IT bagi pelajar dan mahasiswa.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- IDENTITAS NAMA -->
+<section class="relative py-28 px-6 bg-zinc-50 overflow-hidden">
+
+  <!-- soft glow background -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2
+              w-[640px] h-[640px]
+              bg-primary/15 blur-[160px] rounded-full"></div>
+
+  <div class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+
+    <!-- KIRI : VISUAL -->
+    <div class="relative flex justify-center">
+      <div class="absolute -inset-10 bg-primary/20 blur-[120px] rounded-full"></div>
+      <img
+        src="/assets/logo.png"
+        alt="Joki-kan Ajo"
+        class="relative w-64 md:w-72"
+      />
+    </div>
+
+    <!-- KANAN : TEKS -->
+    <div class="space-y-6">
+
+      <span class="block text-xs uppercase tracking-widest text-zinc-400">
+        Identitas Nama
+      </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 leading-tight">
+        Kenapa disebut
+        <span class="text-primary">Joki-kan Ajo?</span>
+      </h2>
+
+      <div class="space-y-4 text-lg text-zinc-700 leading-relaxed">
+
+        <p>
+          Nama ini lahir dari obrolan sehari-hari.
+          Dari kondisi sederhana saat ada tugas yang lagi dikejar deadline
+          dan butuh bantuan supaya bisa beres.
+        </p>
+
+        <p>
+          <strong class="text-zinc-900">Joki</strong> berarti bantuan pengerjaan tugas,
+          <strong class="text-zinc-900">kan</strong> sebagai penekanan,
+          dan <strong class="text-zinc-900">ajo</strong> dalam bahasa Bengkulu berarti aja.
+          Digabung, ini cara ngomong santai ke teman
+          yang lagi ribet sama tugasnya.
+        </p>
+
+      </div>
+
+      <!-- QUOTE PENUTUP -->
+      <blockquote class="relative italic text-zinc-600 border-l-2 border-primary pl-4">
+        “Daripada pusing sendiri, mending joki kan ajo.”
+      </blockquote>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== CARA KAMI BEKERJA ========== -->
+<section class="py-32 px-6 bg-zinc-50">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- SECTION TITLE -->
+    <h2 class="text-3xl md:text-4xl font-semibold mb-16">
+      Cara Kami Bekerja
+    </h2>
+
+    <!-- VALUES GRID -->
+    <div class="grid md:grid-cols-3 gap-14">
+
+      <!-- ITEM -->
+      <div class="group relative pl-6">
+        <span
+          class="absolute left-0 top-0 h-full w-[2px]
+                 bg-zinc-200 group-hover:bg-primary transition-colors">
+        </span>
+
+        <span class="text-sm uppercase tracking-widest text-zinc-400">
+          Jelas dari Awal
+        </span>
+
+        <p class="mt-4 leading-relaxed text-zinc-700">
+          Setiap bantuan selalu diawali dengan memahami konteks tugasnya.
+          Tujuan tugas, instruksi, dan batasannya
+          harus jelas supaya arah pengerjaan tetap relevan.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="group relative pl-6">
+        <span
+          class="absolute left-0 top-0 h-full w-[2px]
+                 bg-zinc-200 group-hover:bg-primary transition-colors">
+        </span>
+
+        <span class="text-sm uppercase tracking-widest text-zinc-400">
+          Rapi & Bertanggung Jawab
+        </span>
+
+        <p class="mt-4 leading-relaxed text-zinc-700">
+          Kami menjaga struktur dan detail
+          di setiap pengerjaan.
+          Bukan sekadar selesai,
+          tapi bisa dipertanggungjawabkan.
+        </p>
+      </div>
+
+      <!-- ITEM -->
+      <div class="group relative pl-6">
+        <span
+          class="absolute left-0 top-0 h-full w-[2px]
+                 bg-zinc-200 group-hover:bg-primary transition-colors">
+        </span>
+
+        <span class="text-sm uppercase tracking-widest text-zinc-400">
+          Konsisten
+        </span>
+
+        <p class="mt-4 leading-relaxed text-zinc-700">
+          Pendekatan kami tidak berubah
+          dari awal hingga akhir:
+          komunikasi yang jelas,
+          proses tertata,
+          dan hasil yang konsisten.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- ================= VISUAL PROCESS ================= -->
+<section class="py-32 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <div class="relative">
+      <img
+        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"
+        class="rounded-2xl h-[260px] w-full object-cover"
+      />
+      <span class="absolute bottom-4 left-4 text-sm text-white bg-black/50 px-3 py-1 rounded-full">
+        Diskusi & Perencanaan
+      </span>
+    </div>
+
+    <div class="relative">
+      <img
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+        class="rounded-2xl h-[260px] w-full object-cover"
+      />
+      <span class="absolute bottom-4 left-4 text-sm text-white bg-black/50 px-3 py-1 rounded-full">
+        Pengerjaan & Penyusunan
+      </span>
+    </div>
+
+    <div class="relative">
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        class="rounded-2xl h-[260px] w-full object-cover"
+      />
+      <span class="absolute bottom-4 left-4 text-sm text-white bg-black/50 px-3 py-1 rounded-full">
+        Review & Penyempurnaan
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEHIND THE BRAND -->
+<section class="bg-zinc-50 relative ">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center  gap-20 pt-24">
+
+    <!-- IMAGE -->
+    <div class="relative h-[620px] ">
+
+      <!-- glow -->
+      <div class="absolute -inset-12 bg-emerald-400/20 blur-[140px] rounded-full z-0"></div>
+
+      <!-- IMAGE FULL HEIGHT -->
+<img
+  src="/assets/man.png"
+  alt="Putra Febrian"
+  class="absolute inset-0 h-full w-full object-contain rounded-3xl z-10"
+/>
+<!-- identity box -->
+<div class="absolute bottom-10 left-10 z-30 backdrop-blur-md bg-white/70 border border-zinc-200 rounded-xl px-5 py-3 shadow-sm">
+  <p class="text-sm font-semibold text-zinc-900">
+    Putra Febrian
+  </p>
+  <p class="text-xs text-zinc-600">
+    Founder & Developer
+  </p>
+</div>
+
+    </div>
+
+<!-- TEXT -->
+<div class="relative space-y-6">
+  <!-- accent -->
+  <div class="absolute -left-6 top-3 h-24 w-[3px] bg-emerald-400 rounded-full"></div>
+
+  <h2 class="text-3xl md:text-4xl font-semibold text-zinc-900">
+    Di Balik Joki-kan Ajo
+  </h2>
+
+<p class="text-lg text-zinc-700 leading-relaxed">
+  Di balik Joki-kan Ajo, ada satu orang yang menjalankan semuanya
+  secara langsung. Dengan latar belakang akademik dan pengalaman teknis,
+  setiap tugas dipahami dari instruksinya,
+  lalu dikerjakan sesuai konteks dan kebutuhannya.
+</p>
+
+<p class="text-zinc-600 leading-relaxed pb-8">
+  Supaya prosesnya tetap stabil, pengerjaan ini dijaga dengan sistem di belakang layar yang tertata rapi.
+  SOP, bot WhatsApp, media sosial, dan website berjalan beriringan
+  sebagai penopang proses yang konsisten dan bisa diandalkan.
+</p>
+
+
+  <blockquote class=" border-l-4 border-blue-400 pl-6 italic text-zinc-700">
+     “Yang bikin tenang bukan janji cepat selesai,
+  tapi proses yang dijaga dari awal.”
+  </blockquote>
+</div>
+  </div>
+<!-- grounding divider -->
+<div class="absolute bottom-0 left-0 w-full h-8 z-20 pointer-events-none">
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-50"></div>
+</div>
+
+
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section class="relative py-48 px-6 bg-zinc-100 overflow-hidden">
+
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[520px] h-[520px] bg-emerald-400/10 blur-[140px] rounded-full"></div>
+
+  <div class="relative max-w-4xl mx-auto space-y-6">
+
+    <!-- HEADER + CORE -->
+    <div class="space-y-3">
+      <div class="w-14 h-[3px] bg-emerald-400 rounded-full"></div>
+
+      <h2 class="text-3xl md:text-4xl font-semibold text-zinc-900">
+        Prinsip yang Kami Pegang
+      </h2>
+
+      <p class="text-lg leading-relaxed text-zinc-800">
+        Setiap tugas dimulai dari satu hal yang paling kami jaga:
+        <span class="font-medium text-zinc-900">
+          arah tugas yang jelas dan hasil yang bisa dipertanggung jawabkan.
+        </span>
+      </p>
+    </div>
+
+<!-- PRINCIPLE BLOCKS -->
+<ol class="space-y-4 px-6">
+
+  <li class="flex gap-4">
+    <span class="flex-shrink-0 text-emerald-500 font-semibold text-lg">
+      01
+    </span>
+    <p class="text-zinc-700 leading-relaxed">
+      Setiap tugas dimulai dari arah yang jelas dan hasil yang bisa dipertanggungjawabkan.
+    </p>
+  </li>
+
+  <li class="flex gap-4">
+    <span class="flex-shrink-0 text-emerald-500 font-semibold text-lg">
+      02
+    </span>
+    <p class="text-zinc-700 leading-relaxed">
+      Sebelum pengerjaan, gambaran hasil dan batas pengerjaan disepakati di awal.
+    </p>
+  </li>
+
+  <li class="flex gap-4">
+    <span class="flex-shrink-0 text-emerald-500 font-semibold text-lg">
+      03
+    </span>
+    <p class="text-zinc-700 leading-relaxed">
+      Kualitas dan ketepatan tetap jadi pegangan utama.
+    </p>
+  </li>
+  <li class="flex gap-4">
+    <span class="flex-shrink-0 text-emerald-500 font-semibold text-lg">
+      04
+    </span>
+    <p class="text-zinc-700 leading-relaxed">
+      Data dan informasi klien dijaga sepenuhnya.
+    </p>
+  </li>
+
+</ol>
+
+
+    <!-- CLOSING -->
+    <div class="border-l-4 border-blue-400 pl-5">
+      <p class="text-sm text-zinc-600 leading-relaxed">
+        Jika suatu permintaan berpotensi menurunkan kualitas
+        atau melewati batas yang bisa kami pertanggung jawabkan,
+        kami akan menyampaikannya dengan jujur, sebelum pengerjaan dimulai.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= CLOSING ================= -->
+<section class="relative py-36 px-6 overflow-hidden bg-zinc-900 text-zinc-100">
+
+  <!-- BACKGROUND ACCENT -->
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2
+              w-[900px] h-[900px]
+              bg-primary/20 blur-[180px] rounded-full"></div>
+
+  <div class="absolute bottom-[-300px] right-[-200px]
+              w-[700px] h-[700px]
+              bg-emerald-400/20 blur-[200px] rounded-full"></div>
+
+  <div class="relative max-w-6xl mx-auto text-center space-y-10">
+
+    <!-- MAIN TITLE (POSITIONING) -->
+    <h2 class="text-3xl md:text-4xl font-semibold leading-tight text-white">
+      Bukan Sekadar Jasa Tugas,
+      <br class="hidden md:block" />
+      <span class="text-emerald-400">
+        Tapi Tempat Bertumpu Saat Tugas Harus Beres.
+      </span>
+    </h2>
+
+    <!-- DESCRIPTION (SUPPORT, BUKAN CERITA BARU) -->
+    <p class="text-lg text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+      Kami hadir untuk membantu pengerjaan tugas akademik dan IT
+      secara profesional, rapi, dan bertanggung jawab,
+      saat kamu butuh pegangan yang bisa diandalkan.
+    </p>
+
+    <!-- CTA -->
+    <div class="pt-8">
+      <a
+        href="/#layanan"
+        class="inline-flex items-center gap-3 px-12 py-4 rounded-full
+               bg-primary text-white font-medium
+               hover:bg-primary/90
+               transition-all duration-300"
+      >
+        Lihat Layanan Kami
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="border-t border-zinc-200 py-6 text-center text-xs text-zinc-500">
+  © 2026 Joki-kan Ajo — Layanan Solusi Akademik & IT
+</footer>
+</body>

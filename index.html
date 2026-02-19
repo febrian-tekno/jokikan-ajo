@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joki-kan Ajo | Academic & IT Task Help</title>
+  <meta name="description" content="Joki-kan Ajo membantu tugas akademik & IT. Aman, rapi, dan sesuai instruksi dosen.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- ICON -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            wa: '#25D366'
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  .nav-link {
+    position: relative;
+    transition: color .3s;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width .3s;
+  }
+  .nav-link:hover {
+    color: #2563eb;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .mobile-link {
+    padding: 12px 0;
+    border-bottom: 1px solid #e4e4e7;
+    transition: transform .2s, color .2s;
+  }
+  .mobile-link:hover {
+    color: #2563eb;
+    transform: translateX(6px);
+  }
+</style>
+
+
+</head>
+
+<body class="bg-white text-zinc-900 scroll-smooth overflow-x-hidden">
+
+<!-- BACKGROUND : SOFT NOISE GRADIENT -->
+<div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-zinc-50 to-white"></div>
+
+  <!-- soft radial glow -->
+  <div class="absolute -top-48 left-1/2 -translate-x-1/2 w-[900px] h-[900px]
+              bg-primary/15 blur-[140px] rounded-full"></div>
+
+  <!-- noise layer -->
+  <div class="absolute inset-0 opacity-[0.03]
+              bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"200\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')]">
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-white border-b border-zinc-200 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="/" class="flex items-center">
+      <img src="/assets/logo.png" alt="Joki-kan Ajo" class="h-8">
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex items-center gap-8 text-sm text-zinc-600">
+      <a href="#layanan" class="nav-link">Layanan & Jasa</a>
+      <a href="#aturan" class="nav-link">Alur Layanan</a>
+      <a href="#kontak" class="nav-link">Kontak</a>
+      <a href="/about.html" class="nav-link">Tentang</a>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-2xl text-zinc-700">
+      <i class="bx bx-menu"></i>
+    </button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu"
+       class="md:hidden fixed inset-0 bg-white translate-x-full
+              transition-transform duration-300 ease-out">
+
+    <!-- MOBILE HEADER (LOGO + CLOSE) -->
+    <div class="flex justify-between items-center px-6 py-4 border-b border-zinc-200">
+      <a href="/" class="flex items-center gap-2">
+        <img src="/assets/logo.png" alt="Joki-kan Ajo" class="h-7">
+      </a>
+      <button id="closeMenu" class="text-2xl text-zinc-700">
+        <i class="bx bx-x"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE LINKS -->
+    <div class="flex flex-col px-6 py-8 gap-6 text-base text-zinc-700">
+      <a href="#layanan" class="mobile-link">Layanan & Jasa</a>
+      <a href="#aturan" class="mobile-link">Alur Layanan</a>
+      <a href="#kontak" class="mobile-link">Kontak</a>
+      <a href="/about.html" class="mobile-link">Tentang</a>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- HERO -->
+<section class="relative pt-36  px-6 overflow-hidden">
+  <!-- background soft blur -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 blur-3xl rounded-full"></div>
+  </div>
+
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- badges -->
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+
+      <span class="inline-flex items-center px-4 py-1.5 text-sm font-medium
+                  bg-primary/10 text-primary rounded-full">
+        Akademik & IT
+      </span>
+
+      <span class="inline-flex items-center px-4 py-1.5 text-sm font-medium
+                  bg-zinc-100 text-zinc-700 rounded-full">
+        SMA • SMK • Mahasiswa
+      </span>
+
+    </div>
+
+
+    <!-- headline -->
+<h1 class="text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+  Layanan Solusi Tugas Akademik & IT<br>
+  <span class="text-primary">Presisi. Terstruktur. Sesuai Instruksi.</span>
+</h1>
+
+
+    <!-- subheadline -->
+    <p class="mt-6 text-zinc-600 md:text-lg leading-relaxed">
+      Layanan bantuan tugas untuk pelajar hingga mahasiswa.<br>
+      Dikerjakan rapi, komunikatif, dan menyesuaikan kebutuhan Anda.
+    </p>
+
+<!-- CTA -->
+<div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+
+  <a href="#kontak"
+     class="inline-flex items-center justify-center
+            px-7 py-3 rounded-xl font-semibold
+            text-white bg-primary
+            transition-colors duration-300 hover:bg-primary/90">
+    Konsultasi Sekarang
+  </a>
+
+  <a href="#layanan"
+     class="relative inline-flex items-center justify-center
+            px-7 py-3 rounded-xl font-semibold
+            text-primary border border-primary/40
+            transition-colors duration-300 group hover:border-primary">
+    <span class="relative">
+      Lihat Layanan
+      <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary
+                   transition-all duration-300 group-hover:w-full"></span>
+    </span>
+  </a>
+
+</div>
+
+  </div>
+
+</section>
+
+ <!-- DIVIDER -->
+  <div class="mt-32 flex flex-col items-center text-center gap-4">
+    <span class="text-sm uppercase tracking-widest text-zinc-400">
+      Fokus Layanan
+    </span>
+    <p class="text-zinc-700 font-medium max-w-xl">
+      Kualitas pengerjaan, kejelasan komunikasi, dan ketepatan instruksi
+      menjadi standar utama dalam setiap proses.
+    </p>
+    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+      <span class="w-2 h-2 rounded-full bg-primary"></span>
+    </div>
+  </div>
+
+<!-- LAYANAN / JASA -->
+<section id="layanan" class="py-32 px-12 relative">
+  <div class="max-w-7xl mx-auto space-y-32">
+
+    <!-- ================= AKADEMIK ================= -->
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="inline-block mb-4 px-4 py-1.5 text-sm rounded-full bg-primary/10 text-primary font-semibold">
+          Jasa Akademik
+        </span>
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Joki Tugas Akademik<br>
+          <span class="text-primary">Dokumen & Laporan</span>
+        </h2>
+
+        <p class="text-zinc-600 mb-6 leading-relaxed">
+            Layanan ini cocok kalau kamu pengin tugas beres tanpa harus
+  habis waktu mikir struktur dan ngerapiin dokumen.
+  Kamu cukup kasih arahan dan bahan yang ada,
+  lalu tugas disusun rapi, isinya fokus ke pembahasan,
+  dan tinggal kamu gunakan sesuai kebutuhan.
+        </p>
+
+        <ul class="grid sm:grid-cols-2 gap-3 text-sm text-zinc-700 mb-8">
+          <li>✔ Makalah & Esai</li>
+          <li>✔ Laporan Praktikum</li>
+          <li>✔ Laporan PKL</li>
+          <li>✔ Resume & Review Jurnal</li>
+          <li>✔ Word, Excel, PowerPoint Presentasi</li>
+          <li>✔ Review Video Pembelajaran</li>
+          <li>✔ Tugas Harian</li>
+          <li>✔ UTS/UAS Berbasis Dokumen</li>
+        </ul>
+
+        <div class="flex gap-4">
+          <a href="#"
+             class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition">
+            Read more
+            <i class="bx bx-right-arrow-alt text-xl"></i>
+          </a>
+        </div>
+      </div>
+
+<!-- Visual Akademik -->
+<div class="relative">
+  <!-- glow -->
+  <div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl"></div>
+
+  <!-- card -->
+  <div class="relative bg-white border border-zinc-200 rounded-3xl shadow-xl overflow-hidden">
+
+    <!-- IMAGE (FULL FIT BOX) -->
+    <div class="h-56 w-full overflow-hidden">
+      <img src="https://blog.academyoflearning.com/wp-content/uploads/2016/09/Writing_laptop-1200x800.jpg"
+           alt="Jasa Joki Akademik"
+           class="w-full h-full object-cover hover:scale-105 transition duration-500">
+    </div>
+
+    <!-- TEXT -->
+    <div class="p-6">
+      <p class="text-sm text-zinc-500">
+      Cocok untuk:
+      </p>
+      <p class="mt-1 font-semibold">
+        SMA • SMK • Mahasiswa
+      </p>
+
+      <p class="mt-3 text-sm text-zinc-600">
+          File rapi dan siap dipakai sesuai kebutuhan tugas.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+    <!-- ================= IT ================= -->
+    <div class="grid md:grid-cols-2 gap-16 items-center md:flex-row-reverse">
+      <div class="md:order-2">
+        <span class="inline-block mb-4 px-4 py-1.5 text-sm rounded-full bg-blue-500/10 text-blue-600 font-semibold">
+          IT & Pemrograman
+        </span>
+
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Joki IT & Coding<br>
+        <span class="text-blue-600">Tugas Praktikum & Project</span>
+      </h2>
+
+
+        <p class="text-zinc-600 mb-6 leading-relaxed">
+Layanan ini dibuat buat kamu yang tugas IT-nya sudah kebayang,
+  tapi mentok di eksekusi atau kena error teknis.
+  Pengerjaan fokus ke fungsi program dan alur logika,
+  lalu hasilnya disertai penjelasan cara kerja kode
+  dan cara menjalankannya, supaya kamu bisa paham,
+  pakai ulang, atau jelasin kembali kalau dibutuhkan.
+        </p>
+
+        <ul class="grid sm:grid-cols-2 gap-3 text-sm text-zinc-700 mb-8">
+          <li>✔ Web statis dan dinamis (HTML, CSS, JS, PHP)</li>
+          <li>✔ Program Python</li>
+          <li>✔ Database, ERD, dan SQL</li>
+          <li>✔ File Cisco Packet Tracer</li>
+          <li>✔ Virtual server (VM)</li>
+          <li>✔ Perbaikan error dan debugging</li>
+        </ul>
+
+
+        <a href="/jasa.html"
+           class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition">
+          Read more
+          <i class="bx bx-right-arrow-alt text-xl"></i>
+        </a>
+      </div>
+
+      <!-- Visual IT -->
+<div class="relative md:order-1">
+  <div class="absolute inset-0 bg-blue-500/10 rounded-3xl blur-2xl"></div>
+
+  <div class="relative bg-white border border-zinc-200 rounded-3xl shadow-xl overflow-hidden">
+
+    <div class="h-56 w-full overflow-hidden">
+      <img src="https://img.freepik.com/premium-photo/computer-monitor-with-word-code-screen_1198274-6764.jpg"
+           alt="Jasa IT & Coding"
+           class="w-full h-full object-cover hover:scale-105 transition duration-500">
+    </div>
+
+    <div class="p-6">
+      <p class="text-sm text-zinc-500">Fokus:</p>
+      <p class="mt-1 font-semibold">Logika • Struktur • Clean Code</p>
+
+      <p class="mt-3 text-sm text-zinc-600">
+        Source code lengkap + penjelasan.
+      </p>
+    </div>
+
+  </div>
+</div>
+</div>
+
+    <!-- ================= TAMBAHAN ================= -->
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="inline-block mb-4 px-4 py-1.5 text-sm rounded-full bg-emerald-500/10 text-emerald-600 font-semibold">
+          Layanan Tambahan
+        </span>
+
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Layanan Tambahan<br>
+          <span class="text-emerald-600">Biar Tugas Bener-bener Beres</span>
+        </h2>
+
+        <p class="text-zinc-600 mb-6 leading-relaxed">
+           Layanan ini pas kalau tugas sebenarnya sudah ada,
+  tapi masih kurang rapi, ada bagian yang belum nyambung,
+  atau butuh perbaikan di waktu terbatas.
+  Pengerjaan menyesuaikan kondisi tugas yang kamu punya,
+  tanpa harus mulai dari nol.
+        </p>
+
+        <ul class="grid sm:grid-cols-2 gap-3 text-sm text-zinc-700 mb-8">
+          <li>✔ Revisi tugas</li>
+          <li>✔ Perbaikan tugas lama</li>
+          <li>✔ Debugging dan fix coding</li>
+          <li>✔ Analisis dan studi kasus</li>
+          <li>✔ Penanganan deadline terbatas</li>
+        </ul>
+
+        <a href="/jasa.html"
+           class="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:gap-3 transition">
+          Read more
+          <i class="bx bx-right-arrow-alt text-xl"></i>
+        </a>
+      </div>
+
+      <!-- Visual Tambahan -->
+<div class="relative">
+  <div class="absolute inset-0 bg-emerald-500/10 rounded-3xl blur-2xl"></div>
+
+  <div class="relative bg-white border border-zinc-200 rounded-3xl shadow-xl overflow-hidden">
+
+    <div class="h-56 w-full overflow-hidden">
+      <img src="https://static.vecteezy.com/system/resources/previews/065/452/700/non_2x/hand-places-solution-puzzle-piece-into-jigsaw-with-problem-written-below-conceptual-image-for-problem-solving-and-strategic-planning-photo.jpg"
+           alt="Layanan Tambahan"
+           class="w-full h-full object-cover hover:scale-105 transition duration-500">
+    </div>
+
+    <div class="p-6">
+      <p class="text-sm text-zinc-500">Catatan:</p>
+      <p class="mt-1 font-semibold">Case by case</p>
+
+      <p class="mt-3 text-sm text-zinc-600">
+         Menyesuaikan kondisi tugas yang ada.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+      <a href="/jasa.html"
+         class="inline-flex items-center gap-3 px-12 py-4 rounded-2xl
+                bg-primary text-white font-semibold text-lg
+                hover:scale-105 hover:shadow-xl transition">
+        Lihat Detail Lengkap Jasa
+        <i class="bx bx-chevrons-right text-2xl"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- KENAPA PILIH KAMI -->
+<section class="py-24 px-6 bg-zinc-50">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- TITLE -->
+    <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-12">
+      Kenapa Pilih <span class="text-blue-600">Kami?</span>
+    </h2>
+
+    <!-- CONTENT -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT : BOX -->
+      <div class="space-y-5">
+        <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+          <h3 class="font-semibold text-lg mb-2">Lebih Aman & Sesuai Harapan</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed">
+            Pengerjaan diarahkan supaya tetap sesuai instruksi, format, dan
+            ekspektasi dosen/guru, jadi kamu tidak perlu khawatir hasil melenceng.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+          <h3 class="font-semibold text-lg mb-2">Hasil Rapi & Mudah Dibaca</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed">
+            Struktur tugas disusun jelas dan runtut sehingga lebih mudah
+            dipahami saat dikumpulkan atau dijelaskan.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white border border-zinc-200 rounded-xl">
+          <h3 class="font-semibold text-lg mb-2">Kamu Tetap Pegang Kendali</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed">
+            Kamu bisa mengecek hasil terlebih dahulu dan meminta penyesuaian
+            agar hasil akhir benar-benar sesuai kebutuhan.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT : IMAGE -->
+      <div class="relative">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+          alt="Workspace"
+          class="w-full h-[420px] object-cover rounded-2xl"
+        />
+      </div>
+
+    </div>
+  </div>
+  <!-- CTA : ABOUT -->
+<div class="mt-16 text-left px-12">
+  <a
+    href="about.html"
+    class="inline-flex items-center gap-2 px-8 py-3 rounded-full
+           border border-blue-600 text-blue-600 font-medium
+           hover:bg-blue-600 hover:text-white
+           transition-all duration-300"
+  >
+    Selengkapnya Tentang Kami
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 5l7 7-7 7" />
+    </svg>
+  </a>
+</div>
+
+</section>
+
+
+<!-- WAVE DIVIDER TOP + BOTTOM -->
+<section class="bg-zinc-50">
+
+  <!-- TOP WAVE -->
+  <svg
+    viewBox="0 0 1440 60"
+    preserveAspectRatio="none"
+    class="w-full h-8 rotate-180"
+  >
+    <path
+      d="M0,30 C120,20 240,40 360,35 C480,30 600,15 720,20 C840,25 960,40 1080,35 C1200,30 1320,20 1440,25 L1440,0 L0,0 Z"
+      fill="#34d399"
+    />
+  </svg>
+
+  <!-- BOTTOM WAVE -->
+  <svg
+    viewBox="0 0 1440 60"
+    preserveAspectRatio="none"
+    class="w-full h-8"
+  >
+    <path
+      d="M0,30 C120,20 240,40 360,35 C480,30 600,15 720,20 C840,25 960,40 1080,35 C1200,30 1320,20 1440,25 L1440,0 L0,0 Z"
+      fill="#34d399"
+    />
+  </svg>
+
+</section>
+
+
+<!-- ALUR LAYANAN -->
+<section id="aturan" class="relative py-20 px-6 bg-zinc-50 overflow-hidden">
+<!-- DECORATIVE DOTS (EMERALD DOMINANT + 2 BIG INDIGO BAWAH) -->
+<div class="pointer-events-none absolute inset-0 overflow-hidden">
+
+  <!-- BULET GEDE (DOMINAN) - DIPERKECIL -->
+  <!-- kiri atas -->
+  <span class="absolute top-16 left-8 w-44 h-44 rounded-full bg-emerald-400/20"></span>
+
+  <!-- kanan atas -->
+  <span class="absolute top-[25%] right-8 w-48 h-48 rounded-full bg-emerald-400/18"></span>
+
+  <!-- kiri tengah -->
+  <span class="absolute top-[50%] left-16 w-40 h-40 rounded-full bg-emerald-300/22"></span>
+
+<span class="absolute bottom-[10%] left-32 w-44 h-44 rounded-full bg-indigo-400/18"></span>
+<span class="absolute bottom-6 right-16 w-44 h-44 rounded-full bg-indigo-300/20"></span>
+
+  <!-- BULET SEDANG (sedikit ikut dikecilin biar proporsional) -->
+  <span class="absolute top-[60%] right-32 w-32 h-32 rounded-full bg-emerald-400/25"></span>
+  <span class="absolute top-[30%] left-[32%] w-24 h-24 rounded-full bg-emerald-300/25"></span>
+  <span class="absolute top-[46%] right-[34%] w-24 h-24 rounded-full bg-indigo-300/22"></span>
+
+  <!-- DOT KECIL (tetap, udah aman) -->
+
+  <span class="absolute top-14 left-72 w-4 h-4 rounded-full bg-emerald-400/45"></span>
+  <span class="absolute top-28 left-80 w-3 h-3 rounded-full bg-emerald-300/40"></span>
+  <span class="absolute top-44 left-76 w-2.5 h-2.5 rounded-full bg-indigo-400/40"></span>
+
+  <span class="absolute top-[48%] left-44 w-4 h-4 rounded-full bg-emerald-400/40"></span>
+  <span class="absolute top-[54%] left-52 w-3 h-3 rounded-full bg-indigo-300/35"></span>
+
+  <span class="absolute top-[26%] right-72 w-4 h-4 rounded-full bg-emerald-400/40"></span>
+  <span class="absolute top-[40%] right-80 w-3 h-3 rounded-full bg-indigo-300/35"></span>
+  <span class="absolute top-[52%] right-76 w-2.5 h-2.5 rounded-full bg-emerald-400/40"></span>
+
+  <span class="absolute bottom-36 right-72 w-4 h-4 rounded-full bg-indigo-400/40"></span>
+  <span class="absolute bottom-52 right-80 w-3 h-3 rounded-full bg-emerald-300/35"></span>
+
+</div>
+
+
+<div class="max-w-6xl mx-auto relative">
+  <!-- HEADER -->
+  <div class="relative text-center mb-20">
+    <h2 class="text-3xl md:text-4xl font-bold">Alur Layanan</h2>
+    <p class="text-zinc-600 mt-3">
+      Proses jelas dari awal sampai file final diterima
+    </p>
+  </div>
+
+  <!-- GARIS TENGAH -->
+  <div class="absolute left-1/2 top-[180px] bottom-0 w-px bg-zinc-200 hidden md:block"></div>
+
+  <!-- LIST STEP -->
+  <div class="relative space-y-16 md:space-y-20">
+
+    <!-- STEP 01 -->
+    <div class="relative grid md:grid-cols-2">
+      <span class="hidden md:block absolute left-1/2 -translate-x-1/2 top-6
+                   w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+
+      <div class="md:pr-20">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm
+                    transition hover:-translate-y-1 hover:shadow-md">
+          <span class="text-primary font-bold text-sm">STEP 01</span>
+          <h3 class="font-semibold text-lg mt-2">Kirim Detail Tugas</h3>
+          <p class="mt-3 text-sm text-zinc-600">
+            Kamu cukup jelaskan kebutuhan tugas sebisanya. Tim kami bantu
+            merapikan dan memastikan instruksi jelas sebelum mulai.
+          </p>
+          <ul class="mt-3 text-sm text-zinc-600 space-y-1">
+            <li>• Jenis tugas & mata pelajaran</li>
+            <li>• Deadline asli</li>
+            <li>• Tingkat pendidikan</li>
+            <li>• Instruksi dosen (jika ada)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 02 -->
+    <div class="relative grid md:grid-cols-2">
+      <span class="hidden md:block absolute left-1/2 -translate-x-1/2 top-6
+                   w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+
+      <div class="md:col-start-2 md:pl-20">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm
+                    transition hover:-translate-y-1 hover:shadow-md">
+          <span class="text-primary font-bold text-sm">STEP 02</span>
+          <h3 class="font-semibold text-lg mt-2">Estimasi dari Admin</h3>
+          <p class="mt-3 text-sm text-zinc-600">
+            Admin akan memberikan estimasi harga dan waktu pengerjaan
+            sesuai tingkat kesulitan dan deadline.
+          </p>
+          <ul class="mt-3 text-sm text-zinc-600 space-y-1">
+            <li>• Harga disampaikan di awal</li>
+            <li>• Waktu pengerjaan realistis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 03 -->
+    <div class="relative grid md:grid-cols-2">
+      <span class="hidden md:block absolute left-1/2 -translate-x-1/2 top-6
+                   w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+
+      <div class="md:pr-20">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm
+                    transition hover:-translate-y-1 hover:shadow-md">
+          <span class="text-primary font-bold text-sm">STEP 03</span>
+<h3 class="font-semibold text-lg mt-2">Deal & Pembayaran</h3>
+<p class="mt-3 text-sm text-zinc-600">
+  Setelah sepakat, kamu cukup bayar
+  <span class="font-medium text-emerald-600">50% dari harga deal</span>
+  dan tugas langsung dikerjakan.
+</p>
+<p class="mt-2 text-sm text-zinc-500">
+  Untuk deadline mepet, pengerjaan
+  <span class="font-medium">wajib full payment</span>
+  sejak awal.
+</p>
+
+<div class="mt-4 inline-flex items-center text-xs text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+  ✓ Ringan di awal • ✓ Jelas dari awal
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 04 -->
+    <div class="relative grid md:grid-cols-2">
+      <span class="hidden md:block absolute left-1/2 -translate-x-1/2 top-6
+                   w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+
+      <div class="md:col-start-2 md:pl-20">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm
+                    transition hover:-translate-y-1 hover:shadow-md">
+          <span class="text-primary font-bold text-sm">STEP 04</span>
+          <h3 class="font-semibold text-lg mt-2">Pengerjaan Dimulai</h3>
+          <p class="mt-3 text-sm text-zinc-600">
+            Tim langsung mulai mengerjakan sesuai instruksi yang sudah disepakati.
+          </p>
+          <p class="mt-2 text-sm text-zinc-500">
+            Deadline dihitung sejak pembayaran diterima.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 05 -->
+    <div class="relative grid md:grid-cols-2">
+      <span class="hidden md:block absolute left-1/2 -translate-x-1/2 top-6
+                   w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+
+      <div class="md:pr-20">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm
+                    transition hover:-translate-y-1 hover:shadow-md">
+          <span class="text-primary font-bold text-sm">STEP 05</span>
+<p class="mt-3 text-sm text-zinc-600">
+  Sebelum dikirim sebagai hasil akhir, kamu akan menerima preview
+  untuk memastikan semuanya sudah sesuai.
+</p>
+<p class="mt-2 text-sm text-zinc-500">
+  kamu dapat meminta perbaikan dan revisi hingga sebanyak 2 kali hingga hasilnya pas.
+</p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 06 -->
+    <div class="relative grid md:grid-cols-2">
+      <span class="hidden md:block absolute left-1/2 -translate-x-1/2 top-6
+                   w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
+
+      <div class="md:col-start-2 md:pl-20">
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm
+                    transition hover:-translate-y-1 hover:shadow-md">
+          <span class="text-primary font-bold text-sm">STEP 06</span>
+          <h3 class="font-semibold text-lg mt-2">Pelunasan & File Final</h3>
+          <p class="mt-3 text-sm text-zinc-600">
+            Setelah pelunasan, file final dikirim tanpa watermark
+            dan siap digunakan.
+          </p>
+          <p class="mt-2 text-sm text-zinc-500">
+            File disimpan hingga 7 hari setelah order selesai.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ================== VALUE BOX ================== -->
+<div class="max-w-6xl mx-auto py-12 px-6 grid md:grid-cols-3 gap-6 bg-zinc-50">
+  <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
+    <h4 class="font-semibold">Lebih Ringan di Awal</h4>
+    <p class="text-sm text-zinc-600 mt-2">
+      Cukup DP 50%, pengerjaan langsung berjalan tanpa ribet.
+    </p>
+  </div>
+
+  <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
+    <h4 class="font-semibold">Jelas & Transparan</h4>
+    <p class="text-sm text-zinc-600 mt-2">
+      Harga, alur, dan estimasi waktu disepakati sejak awal.
+    </p>
+  </div>
+
+  <div class="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm">
+    <h4 class="font-semibold">Kamu Tetap Pegang Kontrol</h4>
+    <p class="text-sm text-zinc-600 mt-2">
+      Ada preview dan revisi supaya hasil akhirnya sesuai harapan.
+    </p>
+  </div>
+</div>
+
+<!-- COCOK UNTUK KAMU -->
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <!-- HEADER -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold">
+        Cocok Untuk Kamu Yang
+      </h2>
+      <p class="mt-3 text-zinc-600">
+        Kami paham, nggak semua orang punya waktu dan energi yang sama
+      </p>
+    </div>
+
+    <!-- LIST -->
+    <div class="space-y-6">
+      <div class="flex items-start gap-4 p-6 bg-zinc-50 border border-zinc-200 rounded-2xl">
+        <span class="flex-shrink-0 w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-semibold">
+          1
+        </span>
+        <div>
+          <h4 class="font-semibold">
+            Sibuk, tapi tugas terus datang
+          </h4>
+          <p class="text-sm text-zinc-600 mt-1">
+            Waktu kepotong kerja, organisasi, atau hal lain. Kamu butuh bantuan
+            supaya tugas tetap jalan tanpa bikin kewalahan.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 p-6 bg-zinc-50 border border-zinc-200 rounded-2xl">
+        <span class="flex-shrink-0 w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-semibold">
+          2
+        </span>
+        <div>
+          <h4 class="font-semibold">
+            Pengin hasil rapi, tapi nggak mau ribet mikirin teknis
+          </h4>
+          <p class="text-sm text-zinc-600 mt-1">
+            Cukup jelasin kebutuhan sebisanya. Kami bantu merapikan
+            dan memastikan arah pengerjaan jelas dari awal.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 p-6 bg-zinc-50 border border-zinc-200 rounded-2xl">
+        <span class="flex-shrink-0 w-9 h-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-semibold">
+          3
+        </span>
+        <div>
+          <h4 class="font-semibold">
+            Nggak mau ambil risiko soal deadline
+          </h4>
+          <p class="text-sm text-zinc-600 mt-1">
+            Kamu butuh proses yang jelas, update yang terkontrol,
+            dan hasil yang bisa dipantau sebelum final.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 px-6 bg-zinc-50">
+  <div class="max-w-4xl mx-auto">
+    <!-- HEADER -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold">
+        Pertanyaan yang Sering Ditanya
+      </h2>
+      <p class="mt-3 text-zinc-600">
+        Supaya kamu lebih yakin sebelum lanjut
+      </p>
+    </div>
+
+    <!-- FAQ LIST -->
+    <div class="space-y-4">
+      <details class="group bg-white border border-zinc-200 rounded-xl p-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+          Apakah harus bayar penuh di awal?
+          <span class="ml-4 text-xl text-zinc-400 transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600">
+          Tidak. Umumnya cukup DP 50%. Full payment hanya untuk deadline mepet.
+        </p>
+      </details>
+
+      <details class="group bg-white border border-zinc-200 rounded-xl p-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+          Apakah bisa revisi?
+          <span class="ml-4 text-xl text-zinc-400 transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600">
+          Bisa. Revisi maksimal 2 kali selama masih sesuai instruksi awal.
+        </p>
+      </details>
+
+      <details class="group bg-white border border-zinc-200 rounded-xl p-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+          Bagaimana kalau instruksi belum jelas?
+          <span class="ml-4 text-xl text-zinc-400 transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600">
+          Tenang, kami bantu merapikan kebutuhan sebelum pengerjaan dimulai.
+        </p>
+      </details>
+
+      <details class="group bg-white border border-zinc-200 rounded-xl p-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+          File final dikirim dalam bentuk apa?
+          <span class="ml-4 text-xl text-zinc-400 transition group-open:rotate-45">+</span>
+        </summary>
+        <p class="mt-3 text-sm text-zinc-600">
+          File dikirim sesuai kebutuhan (PDF, Word, source code, dll) tanpa watermark.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WHATSAPP -->
+<section id="kontak"
+  class="relative py-32 px-6 text-center overflow-hidden
+         bg-gradient-to-br from-slate-900 via-blue-950 to-slate-950">
+
+  <div class="relative max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+      Butuh Bantuan untuk Tugasmu?
+    </h2>
+
+    <p class="text-slate-300 mb-10 leading-relaxed">
+      Kirim detail tugasmu, kami bantu cek dan jelaskan
+      proses pengerjaannya secara rapi dan terstruktur.
+    </p>
+
+    <a
+      href="https://wa.me/6285166176208?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20terkait%20tugas.%20Berikut%20detailnya:"
+      target="_blank"
+      class="inline-flex items-center gap-3
+             bg-green-600 text-white px-10 py-4 rounded-2xl
+             font-semibold text-lg
+             hover:bg-green-700 hover:scale-105 hover:shadow-xl
+             transition"
+    >
+      <i class="bx bxl-whatsapp text-2xl"></i>
+      Chat via WhatsApp
+    </a>
+
+    <p class="mt-6 text-sm text-slate-400">
+      Respon sesuai jam operasional
+    </p>
+  </div>
+</section>
+
+
+<footer class="border-t border-zinc-200 py-6 text-center text-xs text-zinc-500">
+  © 2026 Joki-kan Ajo — Academic & IT Task Help
+</footer>
+
+<div id="waFloat" class="fixed bottom-6 right-6 z-50">
+  <!-- CLOSE (SELALU KELIHATAN) -->
+  <button id="waClose"
+          class="absolute -top-2 -right-2 bg-white shadow
+                 w-7 h-7 rounded-full text-sm flex items-center
+                 justify-center hover:bg-zinc-100 transition">
+    ✕
+  </button>
+
+  <!-- WA BUTTON -->
+  <a href="https://wa.me/6285166176208" target="_blank"
+     class="flex items-center gap-3 bg-[#25D366] text-white
+            px-5 py-3 rounded-full shadow-xl
+            hover:scale-105 transition">
+    <i class="bx bxl-whatsapp text-2xl"></i>
+    <span class="hidden sm:block font-semibold">Chat WhatsApp</span>
+  </a>
+</div>
+
+<!-- WELCOME OVERLAY -->
+<div id="welcomeOverlay"
+     class="fixed inset-0 z-[999] flex items-center justify-center
+            bg-black/60 backdrop-blur-sm">
+
+  <div class="bg-white rounded-2xl max-w-2xl w-full mx-6 p-7
+              shadow-2xl relative animate-[fadeIn_.35s_ease]">
+
+    <!-- CLOSE -->
+    <button id="welcomeClose"
+            class="absolute top-3 right-3 w-8 h-8 rounded-full
+                   bg-zinc-100 hover:bg-zinc-200
+                   flex items-center justify-center transition">
+      ✕
+    </button>
+
+    <!-- TOP ACCENT -->
+    <div class="w-10 h-1 bg-primary rounded-full mb-4"></div>
+
+    <!-- TITLE -->
+    <h3 class="text-3xl font-bold mb-2 leading-tight">
+      Selamat Datang di Joki-kan Ajo
+    </h3>
+
+    <!-- SUB TITLE -->
+    <p class="text-sm text-zinc-500 mb-5">
+      Layanan solusi akademik & IT
+    </p>
+
+    <!-- MAIN MESSAGE -->
+    <p class="text-base text-zinc-700 mb-6 leading-relaxed">
+      Kami membantu pengerjaan tugas akademik dan IT untuk
+      <strong>SMA, SMK, hingga Mahasiswa</strong>
+      dengan hasil rapi dan sesuai instruksi.
+    </p>
+
+    <!-- VALUE POINTS (TETAP DI BAWAH) -->
+    <ul class="space-y-3 text-sm text-zinc-700">
+      <li class="flex gap-3">
+        <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+        Fokus akademik & pemrograman
+      </li>
+      <li class="flex gap-3">
+        <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+        Format jelas & sesuai instruksi
+      </li>
+      <li class="flex gap-3">
+        <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+        Komunikasi selama pengerjaan
+      </li>
+      <li class="flex gap-3">
+        <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+        Privasi & data terjaga
+      </li>
+    </ul>
+
+    <!-- ACTION -->
+    <div class="mt-7 text-right">
+      <button id="welcomeOk"
+              class="inline-flex items-center justify-center
+                     px-4 py-2 rounded-lg
+                     text-primary font-semibold
+                     hover:bg-primary/10 transition">
+        Masuk ke Website
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<script>
+  const overlay = document.getElementById('welcomeOverlay');
+  const closeBtn = document.getElementById('welcomeClose');
+  const okBtn = document.getElementById('welcomeOk');
+
+  function closeOverlay() {
+    overlay.style.display = 'none';
+  }
+
+  closeBtn.onclick = closeOverlay;
+  okBtn.onclick = closeOverlay;
+</script>
+
+
+<script>
+  // NAVBAR MOBILE
+  const menuBtn = document.getElementById('menuBtn');
+  const closeMenu = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.onclick = () => {
+    mobileMenu.classList.remove('translate-x-full');
+  };
+
+  closeMenu.onclick = () => {
+    mobileMenu.classList.add('translate-x-full');
+  };
+
+  // WHATSAPP FLOAT
+  const wa = document.getElementById('waFloat');
+  const waClose = document.getElementById('waClose');
+
+  waClose.onclick = () => {
+    wa.style.display = 'none';
+    setTimeout(() => {
+      wa.style.display = 'block';
+    }, 60000);
+  };
+</script>
+
+
+</body>
+</html>
